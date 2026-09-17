@@ -8,7 +8,7 @@ a { color:inherit; text-decoration:none; }
 .nav-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
 .brand { display:flex; align-items:center; gap:10px; font-weight:850; font-size:1.35rem; letter-spacing:-.04em; }
 .brand-mark { width:38px; height:38px; border-radius:12px; display:grid; place-items:right; color:var(--ink); background:; font-size:1.65rem; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-.nav-links { display:flex; align-items:center; gap:22px; font-size:.94rem; font-weight:650; }
+.nav-links { display:flex; align-items:center; gap:22px; font-size:.94rem; font-weight:450; }
 .nav-links a:hover { color:var(--teal); }
 .menu-toggle { display:none; border:0; border-radius:10px; padding:8px 11px; color:var(--ink); background:var(--white); font-size:1.3rem; cursor:pointer; }
 .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:0 20px; border-radius:999px; font-weight:800; transition:transform .2s,box-shadow .2s; }
