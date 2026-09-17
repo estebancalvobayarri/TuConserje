@@ -5,81 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TuConserje: tu punto de confianza para recibir pedidos y gestionar entregas en el barrio.">
   <title>TuConserje | Tu punto de confianza en el barrio</title>
-  <style>
-    :root { --ink:#112a3d; --blue:#156b86; --teal:#0a9d9a; --sun:#f7bd4b; --cream:#f7f5ef; --white:#fff; --muted:#536574; --line:#dce5e8; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color:var(--ink); background:var(--cream); line-height:1.55; }
-    a { color:inherit; text-decoration:none; }
-    .container { width:min(1120px, calc(100% - 40px)); margin:auto; }
-    .nav { position:sticky; top:0; z-index:10; background:rgba(247,245,239,.93); backdrop-filter:blur(12px); border-bottom:1px solid rgba(17,42,61,.08); }
-    .nav-inner { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
-    .brand { display:flex; align-items:center; gap:10px; font-weight:850; font-size:1.35rem; letter-spacing:-.04em; }
-    .brand-mark { width:38px; height:38px; border-radius:12px; display:grid; place-items:center; color:var(--white); background:linear-gradient(135deg, var(--blue), var(--teal)); font-size:1.25rem; }
-    .nav-links { display:flex; align-items:center; gap:22px; font-size:.94rem; font-weight:650; }
-    .nav-links a:hover { color:var(--teal); }
-    .button { display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:46px; padding:0 20px; border-radius:999px; font-weight:800; transition:transform .2s, box-shadow .2s; }
-    .button:hover { transform:translateY(-2px); box-shadow:0 9px 24px rgba(17,42,61,.16); }
-    .button-primary { color:var(--white); background:var(--ink); }
-    .button-secondary { color:var(--ink); background:var(--white); border:1px solid var(--line); }
-    .hero { overflow:hidden; padding:78px 0 58px; background:radial-gradient(circle at 90% 10%, rgba(247,189,75,.45), transparent 22rem), linear-gradient(125deg,#e5f4f1 0%,#f7f5ef 58%); }
-    .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:54px; }
-    .eyebrow { display:inline-flex; margin-bottom:17px; padding:7px 12px; border-radius:999px; background:rgba(10,157,154,.13); color:#057572; font-weight:800; font-size:.78rem; letter-spacing:.07em; text-transform:uppercase; }
-    h1,h2,h3,p { margin-top:0; }
-    h1 { max-width:720px; margin-bottom:22px; font-size:clamp(2.65rem,6vw,5.05rem); line-height:.98; letter-spacing:-.07em; }
-    .hero p { max-width:605px; margin-bottom:29px; color:var(--muted); font-size:1.15rem; }
-    .hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
-    .hero-note { margin-top:22px; color:var(--muted); font-size:.87rem; }
-    .visual { position:relative; min-height:418px; }
-    .shop-card { position:absolute; inset:15px 0 0 46px; overflow:hidden; border:8px solid var(--white); border-radius:28px; background:var(--blue); box-shadow:0 26px 55px rgba(17,42,61,.22); }
-    .shop-top { height:70px; display:flex; align-items:center; justify-content:space-between; padding:0 22px; background:#f5c756; color:var(--ink); font-size:1.02rem; font-weight:900; letter-spacing:-.03em; }
-    .awning { height:48px; background:repeating-linear-gradient(90deg,#fff 0 34px,#e7594f 34px 68px); }
-    .window { height:214px; margin:25px; display:grid; place-items:center; border:7px solid #72d3d1; border-radius:12px; background:linear-gradient(140deg,#12344b,#26758b); color:var(--white); text-align:center; }
-    .window strong { display:block; font-size:2.15rem; letter-spacing:-.06em; }
-    .window span { display:block; margin-top:7px; font-size:.88rem; opacity:.83; }
-    .parcel { position:absolute; display:grid; place-items:center; width:102px; height:86px; border-radius:9px; background:#bd8250; color:#573a20; font-size:2.3rem; box-shadow:0 16px 20px rgba(0,0,0,.2); }
-    .parcel.one { left:0; bottom:22px; transform:rotate(-8deg); }
-    .parcel.two { right:-8px; bottom:2px; width:122px; height:100px; background:#e5ae62; transform:rotate(6deg); }
-    .section { padding:82px 0; }
-    .section-heading { max-width:680px; margin-bottom:34px; }
-    h2 { margin-bottom:12px; font-size:clamp(2rem,4vw,3.2rem); line-height:1; letter-spacing:-.06em; }
-    .section-heading p { color:var(--muted); font-size:1.05rem; }
-    .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .step { padding:28px; border:1px solid var(--line); border-radius:20px; background:var(--white); }
-    .number { display:grid; place-items:center; width:38px; height:38px; margin-bottom:22px; border-radius:50%; color:var(--white); background:var(--teal); font-weight:900; }
-    h3 { margin-bottom:8px; font-size:1.16rem; }
-    .step p,.service p { margin:0; color:var(--muted); font-size:.96rem; }
-    .services-wrap { background:var(--ink); color:var(--white); }
-    .services-wrap .section-heading p { color:#c9d8e0; }
-    .services { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .service { min-height:228px; padding:28px; border-radius:20px; background:#1c4258; }
-    .service-icon { display:grid; place-items:center; width:52px; height:52px; margin-bottom:28px; border-radius:16px; background:rgba(104,216,208,.16); font-size:1.55rem; }
-    .service p { color:#c9d8e0; }
-    .price-section { background:linear-gradient(125deg,#f5cb65,#f9e49d); }
-    .price-grid { display:grid; grid-template-columns:1fr .9fr; align-items:center; gap:55px; }
-    .price-copy p { max-width:590px; color:#405764; font-size:1.08rem; }
-    .price-card { padding:34px; border:1px solid rgba(17,42,61,.12); border-radius:25px; background:var(--white); box-shadow:0 18px 36px rgba(17,42,61,.12); }
-    .plan-label { margin-bottom:8px; color:var(--teal); font-size:.78rem; font-weight:900; letter-spacing:.08em; text-transform:uppercase; }
-    .price { margin-bottom:17px; font-size:3.55rem; line-height:1; font-weight:900; letter-spacing:-.07em; }
-    .price small { font-size:1rem; letter-spacing:0; }
-    .includes { display:grid; gap:11px; margin:23px 0 27px; padding:0; list-style:none; color:var(--muted); font-size:.94rem; }
-    .includes li::before { content:"✓"; display:inline-block; width:22px; color:var(--teal); font-weight:900; }
-    .notice { padding:16px 18px; border-left:4px solid var(--sun); border-radius:10px; background:#fff7df; color:#51646b; font-size:.85rem; }
-    .cta { padding:82px 0; text-align:center; background:#e8f3f0; }
-    .cta h2 { max-width:700px; margin:0 auto 15px; }
-    .cta p { max-width:610px; margin:0 auto 25px; color:var(--muted); }
-    footer { padding:35px 0; background:var(--ink); color:#ccdce3; font-size:.88rem; }
-    .footer-inner { display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .footer-inner strong { color:var(--white); }
-    @media (max-width:800px) { .nav-links { display:none; } .hero { padding-top:55px; } .hero-grid,.price-grid { grid-template-columns:1fr; gap:34px; } .visual { min-height:345px; max-width:480px; width:90%; margin:auto; } .steps,.services { grid-template-columns:1fr; } .section { padding:64px 0; } }
-    @media (max-width:430px) { .container { width:min(100% - 30px,1120px); } h1 { font-size:2.65rem; } .shop-card { left:20px; } .nav-inner { min-height:65px; } .brand { font-size:1.18rem; } .visual { min-height:305px; } .window { height:165px; margin:18px; } .window strong { font-size:1.7rem; } .parcel { transform:scale(.78)!important; } }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
       <a class="brand" href="#inicio" aria-label="TuConserje, inicio"><span class="brand-mark">⌂</span>TuConserje</a>
-      <nav class="nav-links" aria-label="Navegación principal">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú">☰</button>
+      <nav id="site-menu" class="nav-links" aria-label="Navegación principal">
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#servicios">Servicios</a>
         <a href="#tarifa">Tarifa</a>
@@ -181,5 +114,6 @@
       <span>Valencia · Proyecto en desarrollo</span>
     </div>
   </footer>
+  <script src="script.js" defer></script>
 </body>
 </html>
