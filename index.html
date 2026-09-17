@@ -5,13 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="TuConserje: tu punto de confianza para recibir pedidos y gestionar entregas en el barrio.">
   <title>TuConserje | Tu punto de confianza en el barrio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300..700,0..1,0..200" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#inicio" aria-label="TuConserje, inicio"><span class="brand-mark">⌂</span>TuConserje</a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú">☰</button>
+      <a class="brand" href="#inicio" aria-label="TuConserje, inicio"><span class="brand-mark material-symbols-rounded">home</span>TuConserje</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú"><span class="material-symbols-rounded">menu</span></button>
       <nav id="site-menu" class="nav-links" aria-label="Navegación principal">
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#servicios">Servicios</a>
@@ -30,7 +33,7 @@
           <p>TuConserje es un punto de confianza para vecinos: recibimos tus pedidos online en el barrio y los recoges cuando te venga bien.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#tarifa">Conoce la suscripción</a>
-            <a class="button button-secondary" href="#como-funciona">Así funciona ↓</a>
+            <a class="button button-secondary" href="#como-funciona">Así funciona <span class="material-symbols-rounded">south</span></a>
           </div>
           <p class="hero-note">Proyecto previsto para un bajo comercial en Valencia. Dirección y horarios: próximamente.</p>
         </div>
@@ -40,8 +43,8 @@
             <div class="awning"></div>
             <div class="window"><div><strong>Recogida fácil</strong><span>Pedidos online · Cerca de casa</span></div></div>
           </div>
-          <div class="parcel one">▣</div>
-          <div class="parcel two">▣</div>
+          <div class="parcel one"><span class="material-symbols-rounded">package_2</span></div>
+          <div class="parcel two"><span class="material-symbols-rounded">package_2</span></div>
         </div>
       </div>
     </section>
@@ -67,9 +70,9 @@
           <p>Servicios pensados para resolver pequeños momentos del día a día con cercanía y un proceso claro.</p>
         </div>
         <div class="services">
-          <article class="service"><div class="service-icon">📦</div><h3>Recepción de pedidos</h3><p>Recogemos los paquetes dirigidos a las personas suscritas cuando no pueden estar en casa.</p></article>
-          <article class="service"><div class="service-icon">🔔</div><h3>Aviso de llegada</h3><p>Recibe una notificación cuando tu pedido esté listo para recoger en nuestro punto de barrio.</p></article>
-          <article class="service"><div class="service-icon">🔑</div><h3>Entrega de llaves autorizada</h3><p>Previo acuerdo y autorización, podrás dejar llaves para su entrega a la persona que hayas indicado.</p></article>
+          <article class="service"><div class="service-icon"><span class="material-symbols-rounded">local_shipping</span></div><h3>Recepción de pedidos</h3><p>Recogemos los paquetes dirigidos a las personas suscritas cuando no pueden estar en casa.</p></article>
+          <article class="service"><div class="service-icon"><span class="material-symbols-rounded">notifications</span></div><h3>Aviso de llegada</h3><p>Recibe una notificación cuando tu pedido esté listo para recoger en nuestro punto de barrio.</p></article>
+          <article class="service"><div class="service-icon"><span class="material-symbols-rounded">vpn_key</span></div><h3>Entrega de llaves autorizada</h3><p>Previo acuerdo y autorización, podrás dejar llaves para su entrega a la persona que hayas indicado.</p></article>
         </div>
       </div>
     </section>
@@ -80,7 +83,7 @@
           <span class="eyebrow">Sin complicaciones</span>
           <h2>Tu barrio, mejor organizado.</h2>
           <p>Por una cuota fija, dispones de un punto cercano para simplificar la recepción de tus compras y otras pequeñas gestiones autorizadas.</p>
-          <div class="notice">Sin límite de paquetes, horarios de recepción y atención: de lunes a viernes de 09:00 a 20:00 y sábados de 09:00 a 15:00</div>
+          <div class="notice">Las condiciones definitivas, el límite de paquetes, los horarios y el protocolo de identificación se comunicarán antes de la apertura.</div>
         </div>
         <aside class="price-card" aria-label="Tarifa de suscripción">
           <div class="plan-label">Suscripción vecinal</div>
@@ -99,10 +102,10 @@
 
     <section id="contacto" class="cta">
       <div class="container">
-        <span class="eyebrow">Próximas aperturas</span>
-        <h2>¿Te gustaría tener TuConserje en tu barrio?</h2>
-        <p>Déjanos tus datos y te avisaremos de novedades, ubicaciones y apertura de suscripciones.</p>
-        <a class="button button-primary" href="mailto:contacto@tuconserje.es?subject=Me%20interesa%20TuConserje">Me interesa</a>
+        <span class="eyebrow">Próxima apertura</span>
+        <h2>¿Te gustaría tener TuConserje en tu calle?</h2>
+        <p>Déjanos tus datos cuando estén disponibles los canales de contacto y te avisaremos de novedades, ubicación y apertura de suscripciones.</p>
+        <a class="button button-primary" href="mailto:contacto@tuconserje.es?subject=Me%20interesa%20TuConserje">Solicitar información</a>
         <p class="hero-note">Correo provisional: sustituye contacto@tuconserje.es por tu dirección definitiva antes de publicar.</p>
       </div>
     </section>
