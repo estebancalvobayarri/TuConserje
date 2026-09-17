@@ -9,7 +9,7 @@ a { color:inherit; text-decoration:none; }
 .brand { display:flex; align-items:center; gap:10px; font-weight:850; font-size:1.35rem; letter-spacing:0.05em; }
 .brand-footer { display:flex; align-items:center; gap:10px; font-weight:850; font-size:1.35rem; letter-spacing:0.05em; }
 .brand-mark { display: inline-flex; color:var(--verde); font-size:1.85rem; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-.brand-mark-footer { display: inline-flex; color:var(--white); font-size:1.85rem; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.brand-mark-footer { display: inline-flex; color:var(--white); font-size:1.65rem; font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
 .nav-links { display:flex; align-items:center; gap:22px; font-size:.94rem; font-weight:650; }
 .nav-links a:hover { color:var(--teal); }
 .menu-toggle { display:none; border:0; border-radius:10px; padding:8px 11px; color:var(--ink); background:var(--white); font-size:1.3rem; cursor:pointer; }
